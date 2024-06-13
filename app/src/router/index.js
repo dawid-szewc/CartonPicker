@@ -5,15 +5,25 @@ const routes = [
     component: () => import('@/layouts/default.vue'),
     children: [
       {
-        path: '',
-        name: 'home-view',
-        component: () => import('@/views/HomeView.vue')
+        path: '/',
+        name: 'dashboard-view',
+        component: () => import('@/views/DashboardView.vue')
       },
       {
-        path: 'about',
-        name: 'about-view',
-        component: () => import('@/views/AboutView.vue')
-      }
+        path: '/logs',
+        name: 'logs-view',
+        component: () => import('@/views/LogsView.vue')
+      },
+      {
+        path: '/carton-manager',
+        name: 'carton-manager-view',
+        component: () => import('@/views/CartonManagerView.vue')
+      },
+      {
+        path: '/camera-settings',
+        name: 'camera-settings-view',
+        component: () => import('@/views/CameraSettingsView.vue')
+      },
     ]
   }
 ]
